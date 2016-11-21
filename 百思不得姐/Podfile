@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, ‘8.0’
+use_frameworks!
+
+target '百思不得姐' do
+   pod 'AFNetworking'
+   pod 'SDWebImage'
+   pod 'MJRefresh'
+   pod 'Masonry'
+   pod 'JSONModel'
+
+end
+
