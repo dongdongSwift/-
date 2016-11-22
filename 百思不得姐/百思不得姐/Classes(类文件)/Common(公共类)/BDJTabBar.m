@@ -36,7 +36,7 @@
   手动调用了视图对象的layoutIfNeed方法
  */
 //在当前对象的子视图重新布局的时候调用
-- (void)layoutSubviews {
+- (void)layoutSubviews { 
     [super layoutSubviews];
     //修改按钮的位置
       //注意这里不能使用约束的方式修改(是frame的方法 加的tabbar)

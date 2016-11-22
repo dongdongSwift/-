@@ -27,6 +27,7 @@
 #import "UIButton+Util.h"
 #import "BDJConst.h"
 #import "UIView+Util.h"
+#import "BDJDownloader.h"
 
 
 

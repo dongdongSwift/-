@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4F37D72EE0DC3C8201E3F654 /* Pods______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4CC8A623105FD2F4A6129E /* Pods______.framework */; };
+		F40169981DE418D6001E6E7F /* BDJDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F40169971DE418D6001E6E7F /* BDJDownloader.m */; };
+		F401699B1DE41F4C001E6E7F /* BDJEssenceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F401699A1DE41F4C001E6E7F /* BDJEssenceModel.m */; };
+		F401699F1DE4346C001E6E7F /* EssenceVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F401699D1DE4346C001E6E7F /* EssenceVideoCell.m */; };
+		F40169A01DE4346C001E6E7F /* EssenceVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F401699E1DE4346C001E6E7F /* EssenceVideoCell.xib */; };
+		F40169A21DE43705001E6E7F /* cellmorebtnnormal.png in Resources */ = {isa = PBXBuildFile; fileRef = F40169A11DE43705001E6E7F /* cellmorebtnnormal.png */; };
+		F40169A41DE4370E001E6E7F /* cellmorebtnnormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F40169A31DE4370E001E6E7F /* cellmorebtnnormal@2x.png */; };
 		F46C23B91DE2DFCD0032224A /* UIButton+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F46C23B81DE2DFCD0032224A /* UIButton+Util.m */; };
 		F46C23BE1DE2E7EA0032224A /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F46C23BD1DE2E7EA0032224A /* UIView+Util.m */; };
 		F4BCBE241DE2C7A600A1F316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BCBE231DE2C7A600A1F316 /* main.m */; };
@@ -260,6 +266,15 @@
 		03C536B751853A9BF934DFA2 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 		449EDDEF128FB314837DE2E1 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		8E4CC8A623105FD2F4A6129E /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40169961DE418D6001E6E7F /* BDJDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJDownloader.h; sourceTree = "<group>"; };
+		F40169971DE418D6001E6E7F /* BDJDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJDownloader.m; sourceTree = "<group>"; };
+		F40169991DE41F4C001E6E7F /* BDJEssenceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJEssenceModel.h; sourceTree = "<group>"; };
+		F401699A1DE41F4C001E6E7F /* BDJEssenceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJEssenceModel.m; sourceTree = "<group>"; };
+		F401699C1DE4346C001E6E7F /* EssenceVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssenceVideoCell.h; sourceTree = "<group>"; };
+		F401699D1DE4346C001E6E7F /* EssenceVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EssenceVideoCell.m; sourceTree = "<group>"; };
+		F401699E1DE4346C001E6E7F /* EssenceVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EssenceVideoCell.xib; sourceTree = "<group>"; };
+		F40169A11DE43705001E6E7F /* cellmorebtnnormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellmorebtnnormal.png; sourceTree = "<group>"; };
+		F40169A31DE4370E001E6E7F /* cellmorebtnnormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellmorebtnnormal@2x.png"; sourceTree = "<group>"; };
 		F46C23B71DE2DFCD0032224A /* UIButton+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Util.h"; sourceTree = "<group>"; };
 		F46C23B81DE2DFCD0032224A /* UIButton+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Util.m"; sourceTree = "<group>"; };
 		F46C23BA1DE2E1C10032224A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -708,6 +723,8 @@
 				F4EC13521DE2DDCE003EAD87 /* BDJTabBar.m */,
 				F46C23BA1DE2E1C10032224A /* PrefixHeader.pch */,
 				F46C23BB1DE2E6120032224A /* BDJConst.h */,
+				F40169961DE418D6001E6E7F /* BDJDownloader.h */,
+				F40169971DE418D6001E6E7F /* BDJDownloader.m */,
 			);
 			path = "Common(公共类)";
 			sourceTree = "<group>";
@@ -734,6 +751,8 @@
 		F4BCBE611DE2C9C100A1F316 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F40169991DE41F4C001E6E7F /* BDJEssenceModel.h */,
+				F401699A1DE41F4C001E6E7F /* BDJEssenceModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -741,6 +760,9 @@
 		F4BCBE621DE2C9C100A1F316 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F401699C1DE4346C001E6E7F /* EssenceVideoCell.h */,
+				F401699D1DE4346C001E6E7F /* EssenceVideoCell.m */,
+				F401699E1DE4346C001E6E7F /* EssenceVideoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -855,6 +877,8 @@
 		F4BCBE801DE2CA0200A1F316 /* Essence */ = {
 			isa = PBXGroup;
 			children = (
+				F40169A11DE43705001E6E7F /* cellmorebtnnormal.png */,
+				F40169A31DE4370E001E6E7F /* cellmorebtnnormal@2x.png */,
 				F4BCBE811DE2CA0200A1F316 /* cell-button-line.png */,
 				F4BCBE821DE2CA0200A1F316 /* cell-button-line@2x.png */,
 				F4BCBE831DE2CA0200A1F316 /* cell-content-line.png */,
@@ -1313,6 +1337,7 @@
 				F4BCBF6A1DE2CA0200A1F316 /* defaultUserIcon.png in Resources */,
 				F4BCC00A1DE2CA0200A1F316 /* tabBar_me_click_icon.png in Resources */,
 				F4BCC00C1DE2CA0200A1F316 /* tabBar_me_click_icon@3x.png in Resources */,
+				F40169A01DE4346C001E6E7F /* EssenceVideoCell.xib in Resources */,
 				F4BCBF491DE2CA0200A1F316 /* AppIcon29x29@2x.png in Resources */,
 				F4BCBF7F1DE2CA0200A1F316 /* mainCellShare@2x.png in Resources */,
 				F4BCBFF31DE2CA0200A1F316 /* pushguidebot.png in Resources */,
@@ -1325,6 +1350,7 @@
 				F4BCBE2F1DE2C7A600A1F316 /* Assets.xcassets in Resources */,
 				F4BCBF841DE2CA0200A1F316 /* playButton@3x.png in Resources */,
 				F4BCBFAE1DE2CA0200A1F316 /* LaunchImage.png in Resources */,
+				F40169A41DE4370E001E6E7F /* cellmorebtnnormal@2x.png in Resources */,
 				F4BCBFA21DE2CA0200A1F316 /* FollowBtnClickBg@2x.png in Resources */,
 				F4BCBFF91DE2CA0200A1F316 /* pushguidetop.png in Resources */,
 				F4BCBF7C1DE2CA0200A1F316 /* mainCellDingClick.png in Resources */,
@@ -1424,6 +1450,7 @@
 				F4BCBF791DE2CA0200A1F316 /* mainCellCommentClick@2x.png in Resources */,
 				F4BCBF501DE2CA0200A1F316 /* AppIcon40x40~ipad.png in Resources */,
 				F4BCC0121DE2CA0200A1F316 /* tabBar_new_click_icon@3x.png in Resources */,
+				F40169A21DE43705001E6E7F /* cellmorebtnnormal.png in Resources */,
 				F4BCBFA31DE2CA0200A1F316 /* friendsTrend_login.png in Resources */,
 				F4BCBFF01DE2CA0200A1F316 /* publish-video@2x.png in Resources */,
 				F4BCBF481DE2CA0200A1F316 /* AppIcon29x29.png in Resources */,
@@ -1512,8 +1539,11 @@
 				F4EC13531DE2DDCE003EAD87 /* BDJTabBar.m in Sources */,
 				F46C23B91DE2DFCD0032224A /* UIButton+Util.m in Sources */,
 				F4BCC02D1DE2D1B400A1F316 /* NewsViewController.m in Sources */,
+				F40169981DE418D6001E6E7F /* BDJDownloader.m in Sources */,
 				F4BCC01E1DE2D03A00A1F316 /* EssenceViewController.m in Sources */,
 				F4BCC0241DE2D06600A1F316 /* AttentionViewController.m in Sources */,
+				F401699F1DE4346C001E6E7F /* EssenceVideoCell.m in Sources */,
+				F401699B1DE41F4C001E6E7F /* BDJEssenceModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
