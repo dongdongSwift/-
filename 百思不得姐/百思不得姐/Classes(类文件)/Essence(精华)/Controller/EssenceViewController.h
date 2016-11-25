@@ -6,8 +6,8 @@
 //  Copyright © 2016年 张冬. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BDJMenuViewController.h"
 
-@interface EssenceViewController : UIViewController
+@interface EssenceViewController : BDJMenuViewController
 
 @end

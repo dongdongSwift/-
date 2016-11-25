@@ -5,9 +5,8 @@
 //  Created by 张冬 on 2016/11/21.
 //  Copyright © 2016年 张冬. All rights reserved.
 //
+#import "BDJMenuViewController.h"
 
-#import <UIKit/UIKit.h>
-
-@interface NewsViewController : UIViewController
+@interface NewsViewController : BDJMenuViewController
 
 @end

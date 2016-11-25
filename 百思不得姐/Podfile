@@ -8,6 +8,6 @@ target '百思不得姐' do
    pod 'MJRefresh'
    pod 'Masonry'
    pod 'JSONModel'
-
+   pod 'ProgressHUD'
 end
 

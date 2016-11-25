@@ -17,7 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *passTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHCons;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *commentViewHCons;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *commentLabelYCons;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *vidoImageView;
@@ -79,9 +82,30 @@
     self.playTimeLabel.text = [NSString stringWithFormat:@"%02ld:%02ld",min,sec];
     //8.评论文字
     if (detailModel.top_comments.count>0) {
+        //有评论
         BDJEssenceComment *comment = [detailModel.top_comments firstObject];
         self.commentLabel.text = comment.content;
+    }else{
+        //没有评论
+        self.commentViewHCons = 0;
+        self.commentLabelYCons = 0;
     }
+    
+    //强制 刷新 一次
+    [self layoutIfNeeded];
+    
+
+ //   if (detailModel.top_comments.count>0) {
+      
+        
+  //      self.commentViewHCons.constant = 10;
+  //      self.commentLabelYCons.constant = self.commentLabel.frame.size.height+10+10;
+ //   }else {
+        //没有评论的部分
+    //    self.commentViewHCons = 0;
+   //     self.commentLabelYCons = 0;
+        
+ //   }
     //9.标签
     NSMutableString *tagString = [NSMutableString string];
     for (NSInteger i=0;i<detailModel.tags.count;i++){
@@ -94,6 +118,12 @@
     [self.caiButton setTitle:[detailModel.down stringValue] forState:UIControlStateNormal];
     [self.shareButton setTitle:[detailModel.forward stringValue] forState:UIControlStateNormal];
     [self.commentButton setTitle:detailModel.comment forState:UIControlStateNormal];
+    
+    //强制 刷新 一次
+    [self layoutIfNeeded];
+    
+    //获取cell的高度
+   detailModel.cellHeight = @(CGRectGetMaxY(self.dingButton.frame)+10+10);
 }
 
 - (void)awakeFromNib {
@@ -105,6 +135,8 @@
 }
 //播放按钮
 - (IBAction)palyBtn:(UIButton *)sender {
+    
+    
 }
 //更多按钮
 - (IBAction)clickMoreBtn:(UIButton *)sender {

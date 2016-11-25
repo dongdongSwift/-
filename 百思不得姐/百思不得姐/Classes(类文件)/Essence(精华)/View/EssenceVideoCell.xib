@@ -55,7 +55,7 @@
                                 <color key="textColor" white="0.49476453993055558" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NY2-TV-glO" userLabel="descLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NY2-TV-glO" userLabel="descLabel">
                                 <rect key="frame" x="10" y="48" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,14 +70,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VuI-fX-q5A" userLabel="commentView">
                                 <rect key="frame" x="10" y="209" width="355" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99O-bG-MYQ" userLabel="commentLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99O-bG-MYQ" userLabel="commentLabel">
                                         <rect key="frame" x="10" y="13" width="335" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.87245008680555558" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="99O-bG-MYQ" firstAttribute="leading" secondItem="VuI-fX-q5A" secondAttribute="leading" constant="10" id="0zS-TZ-BGe"/>
                                     <constraint firstItem="99O-bG-MYQ" firstAttribute="top" secondItem="VuI-fX-q5A" secondAttribute="top" constant="13" id="BVR-y8-Zrg"/>
@@ -85,6 +85,11 @@
                                     <constraint firstAttribute="trailing" secondItem="99O-bG-MYQ" secondAttribute="trailing" constant="10" id="b6F-Ai-M2b"/>
                                     <constraint firstAttribute="bottom" secondItem="99O-bG-MYQ" secondAttribute="bottom" constant="10" id="xd3-yR-SuP"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xd3-yR-SuP"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-4E-prM" userLabel="tagView">
                                 <rect key="frame" x="10" y="279" width="355" height="30"/>
@@ -261,6 +266,8 @@
                 <outlet property="caiButton" destination="v8R-1z-F9z" id="rXc-rq-bxT"/>
                 <outlet property="commentButton" destination="hhs-rR-8lz" id="0fP-ht-emm"/>
                 <outlet property="commentLabel" destination="99O-bG-MYQ" id="4CR-6e-4R5"/>
+                <outlet property="commentLabelYCons" destination="BVR-y8-Zrg" id="sl9-VO-5qu"/>
+                <outlet property="commentViewHCons" destination="LFm-8m-1Ee" id="p3f-d4-RlG"/>
                 <outlet property="descLabel" destination="NY2-TV-glO" id="A4j-4K-el7"/>
                 <outlet property="dingButton" destination="hUP-zE-4TS" id="a0Y-Uc-Wbh"/>
                 <outlet property="imageHCons" destination="ga6-Se-Yib" id="PuQ-eB-di9"/>

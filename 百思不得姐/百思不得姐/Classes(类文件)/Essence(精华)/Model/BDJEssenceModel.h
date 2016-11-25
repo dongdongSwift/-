@@ -29,11 +29,12 @@
 @end
 
 
-
+@class BDJEssenceImage;
 @protocol  BDJEssenceTags;
 @protocol  BDJEssenceComment ;
 @class BDJEssenceUser;
 @class BDJEssenceVideo;
+@class BDJEssenceAudio;
 @interface BDJEssenceDetail : JSONModel
 
 @property (nonatomic,copy)NSString<Optional> *bookmark;
@@ -49,12 +50,21 @@
 @property (nonatomic,strong)NSArray<BDJEssenceTags> *tags; //数组
 
 @property (nonatomic,copy)NSString<Optional> *text;
-@property (nonatomic,strong)NSArray<BDJEssenceComment > *top_comments; //数组
+@property (nonatomic,strong)NSArray<BDJEssenceComment,Optional> *top_comments; //数组
 @property (nonatomic,copy)NSString<Optional> *type;
 
 @property (nonatomic,strong)BDJEssenceUser<Optional> *u; //字典
 @property (nonatomic,strong)NSString<Optional> *up;
 @property (nonatomic,strong)BDJEssenceVideo<Optional> *video;//字典
+
+//图片的数据
+@property (nonatomic,strong)BDJEssenceImage<Optional> *image;
+
+//声音数据
+@property(nonatomic,strong)BDJEssenceAudio<Optional> *audio;
+
+//用来获取对应的cell的高度
+@property (nonatomic,strong)NSNumber <Optional> *cellHeight;
 
 @end
 
@@ -121,6 +131,36 @@
 @property (nonatomic,copy)NSArray<NSString,Optional> *video;
 @property (nonatomic,strong)NSNumber<Optional> *width;
 
+
 @end
+
+//图片
+@interface BDJEssenceImage : JSONModel
+@property (nonatomic,strong)NSArray<Optional,NSString> *big;
+@property (nonatomic,strong)NSArray<Optional,NSString> *download_url;
+@property (nonatomic,strong)NSNumber<Optional> *height;
+
+@property (nonatomic,strong)NSArray<Optional,NSString> *medium;
+@property (nonatomic,strong)NSArray<Optional,NSString> *small;
+@property (nonatomic,strong)NSArray<Optional,NSString> *thumbnail_small;
+@property (nonatomic,strong)NSNumber<Optional> *width;
+
+@end
+//声音
+@interface BDJEssenceAudio : JSONModel
+@property (nonatomic,strong)NSArray<NSString,Optional> *audio;
+@property (nonatomic,strong)NSArray<Optional,NSString> *download_url;
+@property (nonatomic,strong)NSNumber<Optional> *duration;
+@property (nonatomic,strong)NSNumber<Optional> *height;
+@property (nonatomic,strong)NSNumber<Optional> *playcount;
+@property (nonatomic,strong)NSNumber<Optional> *playfcount;
+@property (nonatomic,strong)NSArray<Optional,NSString> *thumbnail;
+@property (nonatomic,strong)NSArray<Optional,NSString> *thumbnail_small;
+@property (nonatomic,strong)NSNumber<Optional> *width;
+
+@end
+
+
+
 
 

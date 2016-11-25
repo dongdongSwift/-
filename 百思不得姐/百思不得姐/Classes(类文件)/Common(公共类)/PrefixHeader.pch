@@ -21,6 +21,7 @@
 #import <JSONModel/JSONModel.h>
 #import <Masonry/Masonry.h>
 #import <MJRefresh/MJRefresh.h>
+#import <ProgressHUD/ProgressHUD.h>
 //#import <SDWebImage/UIImageView+WebCache>
 
 //3.自己的类别头文件
@@ -28,7 +29,7 @@
 #import "BDJConst.h"
 #import "UIView+Util.h"
 #import "BDJDownloader.h"
-
+#import "UILabel+Util.h"
 
 
 

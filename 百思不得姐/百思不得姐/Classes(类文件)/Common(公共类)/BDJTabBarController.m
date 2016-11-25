@@ -8,6 +8,10 @@
 
 #import "BDJTabBarController.h"
 #import "BDJTabBar.h"
+#import "BDJMenu.h"
+#import "EssenceViewController.h"
+#import "NewsViewController.h"
+
 
 @interface BDJTabBarController ()
 
@@ -22,8 +26,71 @@
     [UITabBar appearance].tintColor = [UIColor colorWithWhite:64.0f/255.0f alpha:1.0f];
     //使用自定义的TabBar
     [self setValue:[[BDJTabBar alloc] init] forKey:@"tabBar"];
-    
+    //创建视图控制器
     [self createViewControllers];
+    //下载菜单数据
+    [self loadMenuData];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+   
+}
+//获取菜单数据
+- (void)loadMenuData {
+    NSString *filePath = [self menuFilePath];
+    if ([[NSFileManager defaultManager]fileExistsAtPath:filePath])  {
+        //提文件
+        NSData *data = [NSData dataWithContentsOfFile:filePath];
+        BDJMenu *menu = [[BDJMenu alloc] initWithData:data error:nil];
+        //显示
+        [self showAllMenuData:menu];
+    }
+    //更新菜单数据
+    [self downloadMenuData];
+}
+
+//下载菜单数据
+//http://s.budejie.com/public/list-appbar/bs0315-iphone-4.3/
+- (void)downloadMenuData{
+    [BDJDownloader downloadWithURLString:@"http://s.budejie.com/public/list-appbar/bs0315-iphone-4.3/" success:^(NSData *data) {
+       //解析
+        BDJMenu *menu = [[BDJMenu alloc] initWithData:data error:nil];
+        
+        NSString *path = [self menuFilePath];
+        //如果plist文件不存在，显示菜单数据
+        if (![[NSFileManager defaultManager]fileExistsAtPath:path]) {
+            //显示菜单
+            [self showAllMenuData:menu];
+        }
+        
+        //存放本地
+        
+        [data writeToFile:path atomically:YES];
+        
+    } fail:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+//本地菜单文件名
+-(NSString *)menuFilePath {
+    NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    return [docPath stringByAppendingPathComponent:@"menu.plist"];
+}
+//显示菜单
+-(void)showAllMenuData:(BDJMenu *)menu {
+    //设置精华的菜单数据
+    UINavigationController *essenceNavCtrl = [self.viewControllers firstObject];
+    EssenceViewController *essenceCtrl = [essenceNavCtrl.viewControllers firstObject];
+    //NSLog(@"%@",essenceCtrl);
+    essenceCtrl.subMenus = [[menu.menus firstObject] submenus];
+    
+    //设最新的菜单数据
+    if (self.viewControllers.count >= 2) {
+        UINavigationController *newsNavCtrl = self.viewControllers[1];
+        NewsViewController *newsCtrl = [newsNavCtrl.viewControllers firstObject];
+        if (menu.menus.count >= 2) {
+            newsCtrl.subMenus = [menu.menus[1] submenus];
+        }
+    }
 }
 
 //创建视图控制器

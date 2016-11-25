@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.rightImageName = @"review_post_nav_icon_20x17_";
+    self.rightHLImageName = @"review_post_nav_icon_clickN_20x17_";
 }
 
 - (void)didReceiveMemoryWarning {
